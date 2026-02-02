@@ -1,48 +1,66 @@
-# 6.5 MW Utility-Scale Solar PV Analysis ☀️
+# 6.5 MW Utility-Scale Solar PV Analysis
 
-## Project Overview
-[cite_start]This repository contains a techno-economic feasibility study for a **6.5 MW DC** utility-scale photovoltaic system[cite: 1]. [cite_start]The project was modeled using the **System Advisor Model (SAM)** to simulate energy production, system losses, and financial viability over a 25-year project lifespan[cite: 7].
+## 📄 Project Overview
+This repository hosts a techno-economic feasibility study for a **6.5 MW DC** utility-scale photovoltaic system located at **Latitude 27.45, Longitude 71.95**.
 
-[cite_start]The system is designed with bifacial modules and single-axis tracking to maximize specific yield in a high-irradiance location (Lat 27.45, Lon 71.95)[cite: 1, 11].
+The project was simulated using the **NREL System Advisor Model (SAM)** to analyze energy yield, system losses, and financial returns over a 25-year lifespan. The design utilizes bifacial modules and single-axis tracking to optimize performance in a high-irradiance environment.
+
+---
 
 ## 🛠 Technical Specifications
-The system design focuses on high-efficiency components and tracking technology to optimize the Capacity Factor.
+The system is engineered for utility-scale application with the following configuration:
 
-* [cite_start]**Total Capacity:** 6.54 MW DC / 5.01 MW AC [cite: 2, 8]
-* [cite_start]**DC/AC Ratio:** 1.30 [cite: 8]
-* [cite_start]**Modules:** 12,320 units of Aptos Solar Technology (DNA-144-BF10-530W) [cite: 2]
-    * [cite_start]*Type:* Mono-c-Si Bifacial [cite: 2]
-* [cite_start]**Inverters:** 2 units of Sungrow Power Supply (SC2500U) [cite: 8]
-* [cite_start]**Tracking:** 1-axis tracking with 0.3 GCR (Ground Coverage Ratio) [cite: 11]
+* **System Capacity:** 6.54 MW DC / 5.01 MW AC
+* **DC/AC Ratio:** 1.30
+* **Module Type:** Aptos Solar Technology (DNA-144-BF10-530W) - Mono-c-Si Bifacial
+* **Module Quantity:** 12,320 units
+* **Inverters:** Sungrow Power Supply (SC2500U) - 2 units
+* **Tracking System:** Single-axis tracking (0.3 GCR, Backtracking disabled)
+* **Azimuth:** 180° (South)
 
-## 📊 Performance Analysis
-[cite_start]The simulation accounts for detailed system losses, including soiling (-3%), DC wiring (-1.5%), and bifacial electrical mismatch[cite: 49, 73, 59].
+---
 
-* [cite_start]**Annual Energy Production (Year 1):** 13,379,929 kWh (13.38 GWh) [cite: 15]
-* [cite_start]**Capacity Factor:** 23.4% [cite: 15]
-* [cite_start]**Performance Ratio:** 0.81 [cite: 15]
-* [cite_start]**Nominal POA Irradiance:** 80,653,160 kWh [cite: 46]
+## 📊 Performance Metrics (Year 1)
+The simulation results indicate high efficiency due to the use of bifacial technology and tracking.
 
-## 💰 Financial Highlights
-[cite_start]The project is modeled under a Single Owner financial structure with a 20-year internal rate of return target[cite: 1, 13].
+| Metric | Value |
+| :--- | :--- |
+| **Annual Energy Production** | 13,379,929 kWh (13.38 GWh) |
+| **Capacity Factor** | 23.4% |
+| **Performance Ratio** | 0.81 |
+| **Nominal POA Irradiance** | 80,653,160 kWh |
 
-* [cite_start]**Total Installed Cost:** $3,509,218 ($0.54/Watt) [cite: 5]
-* [cite_start]**PPA Price (Bid):** 5.5 cents/kWh [cite: 9]
-* [cite_start]**Levelized Cost of Energy (LCOE):** 4.9 cents/kWh [cite: 13]
-* [cite_start]**Net Present Value (NPV):** $1,344,800 [cite: 13]
-* [cite_start]**Project IRR (Year 20):** 22.2% [cite: 13]
+---
 
-## 📉 Loss Diagram Summary
-A detailed loss tree analysis was performed to identify efficiency drops:
-1.  [cite_start]**Soiling:** 3% loss [cite: 49]
-2.  [cite_start]**Module Deviation from STC:** 12.27% loss [cite: 65]
-3.  [cite_start]**Inverter Efficiency:** 2.4% loss [cite: 90]
-4.  [cite_start]**DC Wiring:** 1.5% loss [cite: 73]
+## 💰 Financial Analysis
+The project is modeled under a **Single Owner** financial structure.
 
-## 📂 Repository Structure
-* `Solar_Project.sam` - The source file for the NREL System Advisor Model.
-* `Report.pdf` - Full PDF report containing loss diagrams and cash flow tables.
-* `README.md` - Project documentation.
+* **Total Installed Cost:** $3,509,218 ($0.54/Watt)
+* **PPA Price (Bid):** 5.5 cents/kWh
+* **LCOE (Nominal):** 4.9 cents/kWh
+* **Net Present Value (NPV):** $1,344,800
+* **Internal Rate of Return (IRR):** 22.2% (at Year 20)
+* **Inflation Rate:** 2.5%
+* **Real Discount Rate:** 6.4%
+
+---
+
+## 📉 System Losses
+A detailed loss tree analysis was conducted to identify efficiency reductions:
+
+* **Module Deviation from STC:** -12.27%
+* **Soiling:** -3.0%
+* **Inverter Efficiency:** -2.4%
+* **DC Wiring:** -1.5%
+* **Reflection (IAM):** -1.12%
+* **Diodes and Connections:** -0.5%
+
+---
+
+## 📂 Repository Contents
+* `Solar_Analysis_Model.sam` - The source simulation file (NREL SAM).
+* `Detailed_Report.pdf` - Comprehensive PDF report including monthly output graphs and cash flow tables.
+* `README.md` - Project documentation and summary.
 
 ## 🚀 Tools Used
-* [cite_start]**NREL SAM (System Advisor Model):** For performance and financial modeling[cite: 3].
+* **System Advisor Model (SAM) 2025.4.16:** Used for performance modeling and financial analysis.
